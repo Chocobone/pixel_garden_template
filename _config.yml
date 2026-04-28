@@ -1,0 +1,46 @@
+title: Pixel Garden Template
+url: "https://Chocobone.github.io"
+baseurl: "/pixel_garden_template"
+
+include: ["_pages", "assets", "styles.scss", "404.html"]
+exclude: ["_includes/notes_graph.json"]
+
+use_html_extension: false
+open_external_links_in_new_tab: true
+embed_tweets: false
+
+permalink: pretty
+relative_permalinks: false
+
+# Social links (used in _includes/social-buttons.html)
+social:
+  github: Chocobone
+  linkedin: ""   # LinkedIn profile URL slug or leave empty
+
+plugins:
+  - jekyll-last-modified-at
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+collections:
+  notes:
+    output: true
+    permalink: /:slug
+
+defaults:
+  - scope:
+      path: "**/*"
+    values:
+      layout: "default"
+  - scope:
+      path: "_notes/**/*.md"
+    values:
+      layout: "note"

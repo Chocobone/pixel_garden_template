@@ -1,0 +1,227 @@
+/* _sass/_code.scss - Consolidated Code Styling */
+
+.highlight {
+    background: var(--code-bg);
+    color: var(--text-color);
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    border-radius: 8px;
+    font-size: 0.9em;
+    overflow: auto;
+    margin: 1.5rem 0;
+    font-family: "Press Start 2P", cursive;
+    position: relative;
+    border: 2px solid var(--border-color);
+
+    code {
+        padding: 0;
+        font-family: inherit;
+        color: inherit;
+        background-color: transparent;
+    }
+
+    /* Light Mode Syntax Highlighting - GitHub-like */
+    .c   { color: #999988; font-style: italic; }
+    .err { color: #a61717; background-color: #e3d2d2; }
+    .k   { color: #000000; font-weight: bold; }
+    .o   { color: #000000; font-weight: bold; }
+    .cm  { color: #999988; font-style: italic; }
+    .cp  { color: #999999; font-weight: bold; }
+    .c1  { color: #999988; font-style: italic; }
+    .cs  { color: #999999; font-weight: bold; font-style: italic; }
+    .gd  { color: #000000; background-color: #ffdddd; }
+    .ge  { font-style: italic; }
+    .gr  { color: #aa0000; }
+    .gh  { color: #999999; }
+    .gi  { color: #000000; background-color: #ddffdd; }
+    .go  { color: #888888; }
+    .gp  { color: #555555; }
+    .gs  { font-weight: bold; }
+    .gu  { color: #aaaaaa; }
+    .gt  { color: #aa0000; }
+    .kc  { color: #000000; font-weight: bold; }
+    .kd  { color: #000000; font-weight: bold; }
+    .kp  { color: #000000; font-weight: bold; }
+    .kr  { color: #000000; font-weight: bold; }
+    .kt  { color: #445588; font-weight: bold; }
+    .m   { color: #009999; }
+    .s   { color: #d14; }
+    .na  { color: #008080; }
+    .nb  { color: #0086b3; }
+    .nc  { color: #445588; font-weight: bold; }
+    .no  { color: #008080; }
+    .ni  { color: #800080; }
+    .ne  { color: #990000; font-weight: bold; }
+    .nf  { color: #990000; font-weight: bold; }
+    .nn  { color: #555555; }
+    .nt  { color: #000080; }
+    .nv  { color: #008080; }
+    .ow  { color: #000000; font-weight: bold; }
+    .w   { color: #bbbbbb; }
+    .mf  { color: #009999; }
+    .mh  { color: #009999; }
+    .mi  { color: #009999; }
+    .mo  { color: #009999; }
+    .sb  { color: #d14; }
+    .sc  { color: #d14; }
+    .sd  { color: #d14; }
+    .s2  { color: #d14; }
+    .se  { color: #d14; }
+    .sh  { color: #d14; }
+    .si  { color: #d14; }
+    .sx  { color: #d14; }
+    .sr  { color: #009926; }
+    .s1  { color: #d14; }
+    .dl  { color: #d14; }
+    .ss  { color: #990073; }
+    .bp  { color: #999999; }
+    .vc  { color: #008080; }
+    .vg  { color: #008080; }
+    .vi  { color: #008080; }
+    .il  { color: #009999; }
+}
+
+/* Dark Mode Syntax Highlighting - Dracula Theme */
+.is-dark .highlight,
+[data-theme="dark"] .highlight {
+    .c   { color: #6272a4; font-style: italic; }
+    .err { color: #ff5555; }
+    .k   { color: #ff79c6; font-weight: bold; }
+    .o   { color: #ff79c6; }
+    .cm  { color: #6272a4; font-style: italic; }
+    .cp  { color: #ff79c6; }
+    .c1  { color: #6272a4; font-style: italic; }
+    .cs  { color: #6272a4; font-style: italic; }
+    .gd  { color: #ff5555; }
+    .ge  { font-style: italic; }
+    .gr  { color: #ff5555; }
+    .gh  { color: #8be9fd; font-weight: bold; }
+    .gi  { color: #50fa7b; }
+    .go  { color: #f8f8f2; }
+    .gp  { color: #f1fa8c; }
+    .gs  { font-weight: bold; }
+    .gu  { color: #8be9fd; font-weight: bold; }
+    .gt  { color: #ff5555; }
+    .kc  { color: #bd93f9; font-weight: bold; }
+    .kd  { color: #8be9fd; font-style: italic; }
+    .kp  { color: #ff79c6; font-weight: bold; }
+    .kr  { color: #ff79c6; font-weight: bold; }
+    .kt  { color: #8be9fd; }
+    .m   { color: #bd93f9; }
+    .s   { color: #f1fa8c; }
+    .na  { color: #50fa7b; }
+    .nb  { color: #8be9fd; }
+    .nc  { color: #50fa7b; font-weight: bold; }
+    .no  { color: #bd93f9; }
+    .ni  { color: #f8f8f2; }
+    .ne  { color: #50fa7b; font-weight: bold; }
+    .nf  { color: #50fa7b; font-weight: bold; }
+    .nn  { color: #f8f8f2; }
+    .nt  { color: #ff79c6; }
+    .nv  { color: #8be9fd; font-style: italic; }
+    .ow  { color: #ff79c6; font-weight: bold; }
+    .w   { color: #f8f8f2; }
+    .mf  { color: #bd93f9; }
+    .mh  { color: #bd93f9; }
+    .mi  { color: #bd93f9; }
+    .mo  { color: #bd93f9; }
+    .sb  { color: #f1fa8c; }
+    .sc  { color: #f1fa8c; }
+    .sd  { color: #f1fa8c; }
+    .s2  { color: #f1fa8c; }
+    .se  { color: #f1fa8c; }
+    .sh  { color: #f1fa8c; }
+    .si  { color: #f1fa8c; }
+    .sx  { color: #f1fa8c; }
+    .sr  { color: #f1fa8c; }
+    .s1  { color: #f1fa8c; }
+    .dl  { color: #f1fa8c; }
+    .ss  { color: #f1fa8c; }
+    .bp  { color: #f8f8f2; }
+    .vc  { color: #8be9fd; font-style: italic; }
+    .vg  { color: #8be9fd; font-style: italic; }
+    .vi  { color: #8be9fd; font-style: italic; }
+    .il  { color: #bd93f9; }
+}
+
+/* 8-bit macOS Traffic Lights */
+.code-traffic-lights {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    image-rendering: pixelated;
+    z-index: 5;
+}
+
+.traffic-light {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 2px;
+        height: 2px;
+        image-rendering: pixelated;
+    }
+
+    &.tl-red::before {
+        background: #ff5f57;
+        box-shadow:
+            2px 0 #ff5f57, 4px 0 #ff5f57,
+            -2px 2px #ff5f57, 0 2px #ff5f57, 2px 2px #ff5f57, 4px 2px #ff5f57, 6px 2px #ff5f57,
+            -2px 4px #ff5f57, 0 4px #ff5f57, 2px 4px #ff5f57, 4px 4px #ff5f57, 6px 4px #ff5f57,
+            -2px 6px #ff5f57, 0 6px #ff5f57, 2px 6px #ff5f57, 4px 6px #ff5f57, 6px 6px #ff5f57,
+            0 8px #ff5f57, 2px 8px #ff5f57, 4px 8px #ff5f57;
+    }
+
+    &.tl-yellow::before {
+        background: #febc2e;
+        box-shadow:
+            2px 0 #febc2e, 4px 0 #febc2e,
+            -2px 2px #febc2e, 0 2px #febc2e, 2px 2px #febc2e, 4px 2px #febc2e, 6px 2px #febc2e,
+            -2px 4px #febc2e, 0 4px #febc2e, 2px 4px #febc2e, 4px 4px #febc2e, 6px 4px #febc2e,
+            -2px 6px #febc2e, 0 6px #febc2e, 2px 6px #febc2e, 4px 6px #febc2e, 6px 6px #febc2e,
+            0 8px #febc2e, 2px 8px #febc2e, 4px 8px #febc2e;
+    }
+
+    &.tl-green::before {
+        background: #28c840;
+        box-shadow:
+            2px 0 #28c840, 4px 0 #28c840,
+            -2px 2px #28c840, 0 2px #28c840, 2px 2px #28c840, 4px 2px #28c840, 6px 2px #28c840,
+            -2px 4px #28c840, 0 4px #28c840, 2px 4px #28c840, 4px 4px #28c840, 6px 4px #28c840,
+            -2px 6px #28c840, 0 6px #28c840, 2px 6px #28c840, 4px 6px #28c840, 6px 6px #28c840,
+            0 8px #28c840, 2px 8px #28c840, 4px 8px #28c840;
+    }
+}
+
+/* Copy Button */
+.copy-code-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+    padding: 4px 10px;
+    z-index: 10;
+    font-family: "Press Start 2P", cursive;
+}
+
+/* Copied balloon */
+.nes-balloon.copied-balloon {
+    position: absolute;
+    display: none;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    pointer-events: none;
+    font-size: 0.7rem;
+    color: #212529;
+}

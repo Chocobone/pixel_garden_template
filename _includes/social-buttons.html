@@ -1,0 +1,26 @@
+<div
+    class="social-buttons"
+    style="display: flex; gap: 20px; align-items: center; text-align: center"
+>
+    <div class="share" style="margin-right: 15px">
+        {% if site.social.github %}
+        <a
+            href="https://github.com/{{ site.social.github }}"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; color: inherit"
+        >
+            <i class="nes-icon github"></i>
+        </a>
+        {% endif %}
+        {% if site.social.linkedin %}
+        <a
+            href="https://www.linkedin.com/in/{{ site.social.linkedin }}/"
+            target="_blank"
+            rel="noopener"
+        >
+            <i class="nes-icon linkedin"></i>
+        </a>
+        {% endif %}
+    </div>
+</div>

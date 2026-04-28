@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        <div class="wrapper">
+            <header class="site-header">{% include nav.html %}</header>
+            <main>{{ content }}</main>
+            <footer style="margin-top: 20px; text-align: center">
+                {% include footer.html %}
+            </footer>
+        </div>
+        <script>
+            {% include script.js %}
+        </script>
+    </body>
+</html>
