@@ -1,9 +1,11 @@
 title: Pixel Garden Template
-url: "https://Chocobone.github.io"
+description: "A retro 8-bit digital garden built with Jekyll and NES.CSS — bidirectional links, dark mode, tag filtering, pixel-art fonts."
+author: Chocobone
+url: "https://chocobone.github.io"
 baseurl: "/pixel_garden_template"
 
 include: ["_pages", "assets", "styles.scss", "404.html"]
-exclude: ["_includes/notes_graph.json"]
+exclude: ["_includes/notes_graph.json", "jekyll-theme-pixel-garden.gemspec"]
 
 use_html_extension: false
 open_external_links_in_new_tab: true

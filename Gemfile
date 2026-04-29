@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+# Uncomment when publishing the gem: gemspec
 gem "jekyll", "~> 4.4"
 gem "jekyll-last-modified-at"
 gem "webrick", "~> 1.9"
