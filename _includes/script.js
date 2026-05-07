@@ -17,13 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (block.parentElement.closest(".highlight")) return;
     if (block.querySelector(".copy-code-button")) return;
 
+    // Detect language from parent element's class (e.g. language-python)
+    const parentClasses = block.parentElement.className || "";
+    const langMatch = parentClasses.match(/language-(\w+)/);
+    const language = langMatch ? langMatch[1] : "";
+
+    // Outer nes-container wrapper
+    const wrapper = document.createElement("div");
+    wrapper.className = "nes-container code-block-container";
+
+    // Top bar: traffic lights (left) + copy button (right)
+    const topBar = document.createElement("div");
+    topBar.className = "code-topbar";
+
     const lights = document.createElement("div");
     lights.className = "code-traffic-lights";
     lights.innerHTML =
       '<span class="traffic-light tl-red"></span>' +
       '<span class="traffic-light tl-yellow"></span>' +
       '<span class="traffic-light tl-green"></span>';
-    block.insertBefore(lights, block.firstChild);
 
     const button = document.createElement("button");
     button.className = "nes-btn is-primary copy-code-button";
@@ -38,11 +50,21 @@ document.addEventListener("DOMContentLoaded", () => {
       textarea.select();
       document.execCommand("copy");
       document.body.removeChild(textarea);
-
       showCopiedBalloon(e.pageY, e.pageX);
     });
 
-    block.style.position = "relative";
-    block.appendChild(button);
+    topBar.appendChild(lights);
+    topBar.appendChild(button);
+
+    // Language label below top bar
+    const langLabel = document.createElement("div");
+    langLabel.className = "code-language-label";
+    langLabel.textContent = language;
+
+    // Build structure: wrapper > topBar + langLabel + highlight block
+    block.parentNode.insertBefore(wrapper, block);
+    wrapper.appendChild(topBar);
+    wrapper.appendChild(langLabel);
+    wrapper.appendChild(block);
   });
 });
